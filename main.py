@@ -1,6 +1,4 @@
-
 #import necessary modules we need to use, define the proper pins for led, motor, switch and I2C communication.
-
 import time
 import ujson
 import ubinascii
@@ -11,7 +9,6 @@ from umqtt.simple import MQTTClient
 import ustruct as struct
 
 # Default MQTT server to connect to
-
 CLIENT_ID = "12345"
 BROKER_ADDRESS = "192.168.0.10"
 
@@ -117,7 +114,6 @@ def main():
     client.subscribe(b"HME")
     s1_adr = 57 # Sensor1's Address
     s2_adr = 41 # Sensor2's Address
-
     i=-1 # To indicate switch mode
     
     while(True):
@@ -153,4 +149,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
